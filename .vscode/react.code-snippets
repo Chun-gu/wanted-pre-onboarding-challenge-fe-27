@@ -1,0 +1,94 @@
+{
+	// Components
+	"export default React Component": {
+		"prefix": "edrc",
+		"body": [
+			"${2:type $1Props = ${3:{ $4 \\}};}",
+			"",
+			"export default function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}(${5:{ $6 \\}: $1Props}) {",
+			"\t$0",
+			"\t",
+			"\treturn <$7>$8</$7>;",
+			"}",
+			"",
+		],
+		"description": "export default React Component",
+		"scope": "typescriptreact",
+	},
+	"export default React Component - Arrow": {
+		"prefix": "edarc",
+		"body": [
+			"${2:type $1Props = ${3:{ $4 \\}};}",
+			"",
+			"const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = (${5:{ $6 \\}: $1Props}) => {",
+			"\t$0",
+			"\t",
+			"\treturn <$7>$8</$7>;",
+			"}",
+			"",
+			"export default $1",
+		],
+		"description": "export default React Component - Arrow",
+		"scope": "typescriptreact",
+	},
+	"export named React Component": {
+		"prefix": "enrc",
+		"body": [
+			"${2:type $1Props = ${3:{ $4 \\}};}",
+			"",
+			"export function ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}(${5:{ $6 \\}: $1Props}) {",
+			"\t$0",
+			"\t",
+			"\treturn <$7>$8</$7>;",
+			"}",
+			"",
+		],
+		"description": "export named React Component",
+		"scope": "typescriptreact",
+	},
+	"export named React Component - Arrow": {
+		"prefix": "enarc",
+		"body": [
+			"${2:type $1Props = ${3:{ $4 \\}};}",
+			"",
+			"export const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = (${5:{ $6 \\}: $1Props}) => {",
+			"\t$0",
+			"\t",
+			"\treturn <$7>$8</$7>;",
+			"}",
+			"",
+		],
+		"description": "export named React Component - Arrow",
+		"scope": "typescriptreact",
+	},
+
+	// Hooks
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"$1useEffect(() => {",
+			"\t$2",
+			"",
+			"${3:\treturn () => {\n\t\t$4\n\\};}",
+			"}, [$5]);",
+			"$0",
+		],
+		"description": "useEffect",
+		"scope": "typescript, typescriptreact",
+	},
+	"useRef": {
+		"prefix": "ur",
+		"body": ["const $2Ref = $1useRef${4:<${5:any}>}($3);", "$0"],
+		"description": "useRef",
+		"scope": "typescript, typescriptreact",
+	},
+	"useState": {
+		"prefix": "us",
+		"body": [
+			"const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = $1useState${4:<${5:any}>}($3);",
+			"$0",
+		],
+		"description": "useState",
+		"scope": "typescript, typescriptreact",
+	},
+}
