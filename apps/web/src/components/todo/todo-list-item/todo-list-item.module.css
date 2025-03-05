@@ -1,0 +1,9 @@
+.todo-list-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.todo-title {
+	font-weight: 400;
+	font-size: 2rem;
+}

@@ -1,15 +1,24 @@
 {
 	"editor.codeActionsOnSave": {
-		"source.addMissingImports": "always" // 저장 시 누락된 import 자동 추가
+		"source.addMissingImports": "always" // 누락된 import 자동 추가
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.linkedEditing": true, // 태그 쌍 자동 수정
+	"editor.quickSuggestions": { "strings": "on" }, // tailwindcss intellisense
 	"editor.tabSize": 2,
+	//
 	"explorer.compactFolders": false, // 폴더 collapse 금지
+	//
 	"files.associations": {
-		"*.code-snippets": "json"
+		"*.code-snippets": "json",
+		"*.css": "tailwindcss"
 	},
+	//
 	"typescript.preferences.preferTypeOnlyAutoImports": true, // type 자동 import시 type only 선호
-	"typescript.updateImportsOnFileMove.enabled": "always" // 파일 변경 시 import 업데이트
+	"typescript.updateImportsOnFileMove.enabled": "always", // 파일 변경 시 import 업데이트
+	//
+	"workbench.editor.customLabels.patterns": {
+		"**/apps/**/index.ts": "${dirname(2)}/${dirname}"
+	}
 }

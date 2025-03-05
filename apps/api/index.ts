@@ -1,10 +1,15 @@
-import { createConnection } from "./models/db";
-import app from "./app";
+import { serve } from "@hono/node-server";
 
-createConnection();
+import app from "./app.js";
+import { DB } from "./models/db.js";
 
-const port = process.env.PORT || 8080;
+DB.createConnection({
+	preserve: true,
+	filename: "db.json",
+});
 
-app.listen(port, () => {
-	console.log(`Now listening on port ${port}`);
+const port = parseInt(String(process.env.PORT)) || 8080;
+
+serve({ fetch: app.fetch, port }, (info) => {
+	console.log(`Listening on http://localhost:${info.port}`);
 });

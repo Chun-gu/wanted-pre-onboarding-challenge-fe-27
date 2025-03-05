@@ -4,4 +4,9 @@
 		"body": ["console.log($1)"],
 		"description": "console.log",
 	},
+	"mark": {
+		"prefix": "mrk",
+		"body": ["// MARK: $1"],
+		"description": "create a marker",
+	},
 }

@@ -5,13 +5,10 @@
 		"outDir": "./dist",
 		"rootDir": ".",
 		"strict": true,
-		"moduleResolution": "node",
-		"esModuleInterop": true
+		"moduleResolution": "Bundler",
+		"noEmit": true,
+		"skipLibCheck": true
 	},
 	"include": ["**/*"],
-	"exclude": ["./node_modules"],
-	"ts-node": {
-		"transpileOnly": true,
-		"swc": true
-	}
+	"exclude": ["./node_modules"]
 }

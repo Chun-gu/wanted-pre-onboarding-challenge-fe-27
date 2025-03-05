@@ -1,0 +1,24 @@
+/* input {
+	display: block;
+	border: 1px solid gray;
+}
+.error-message {
+	display: none;
+	color: red;
+}
+input:invalid + .error-message {
+	display: block;
+}
+
+.sign-in-form:has(input:invalid) ~ .submit-button[type="submit"] {
+}
+
+.submit-button {
+	color: white;
+	background-color: blue;
+	padding-inline: 20px;
+	padding-block: 10px;
+}
+.submit-button:invalid {
+	opacity: 0.5;
+} */
